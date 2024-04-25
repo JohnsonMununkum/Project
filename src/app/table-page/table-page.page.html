@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>News</ion-title>
+     <!-- gives a back button heading to the home page -->
+   <ion-buttons slot="start">
+    <ion-back-button defaultHref="/">
+    </ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">News</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<div id="container">
+  <!-- data binding for title-->
+ <h2 text="bold">{{title}}</h2>
+</div>
+<!-- not working -->
+<ul>
+  <li *ngFor= "let t of teams">{{t.teams}}</li>
+  </ul>
+</ion-content>
