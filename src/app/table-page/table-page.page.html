@@ -1,26 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>News</ion-title>
-     <!-- gives a back button heading to the home page -->
-   <ion-buttons slot="start">
-    <ion-back-button defaultHref="/">
-    </ion-back-button>
-  </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">News</ion-title>
+      <ion-title>News</ion-title>
     </ion-toolbar>
   </ion-header>
-<div id="container">
-  <!-- data binding for title-->
- <h2 text="bold">{{title}}</h2>
+    <!-- Ion-padding class gives padding between the content and the title-->
+  <ion-content class="ion-padding">
+    <div>
+         <!-- lets user direct to the news page of the app-->
+        <!-- fill = clear allows the buttons background to be clear-->
+        <!-- color just sets the text color to dark-->
+        <!-- have the news page disabled as the user is already on this page-->
+        <ion-button [routerLink]="['/home']" fill="clear" color="dark">Home Page</ion-button>
+         <!-- br tag to put the next button on anew line-->
+        <br>
+      <ion-button [routerLink]="['/table-page']" fill="clear" color="dark" [disabled]="true">New's Page</ion-button>
+    </div>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button>
+          
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-title>News</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Ion-padding class gives padding between the content and the title-->
+  <ion-content class="ion-padding"> 
+    <div id="container">
+      <!-- data binding for title-->
+     <h2 text="bold">{{title}}</h2>
 </div>
-<!-- not working -->
-<ul>
-  <li *ngFor= "let t of teams">{{t.teams}}</li>
-  </ul>
-</ion-content>
+<!-- Image for the league table-->
+<img src="https://i.redd.it/rhgba29fnzxb1.jpg" height="auto" width="auto">
+ </ion-content>

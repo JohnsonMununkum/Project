@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-table-page',
   templateUrl: './table-page.page.html',
   styleUrls: ['./table-page.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonBackButton]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, IonBackButton, IonMenu, IonMenuButton, RouterLinkWithHref,IonButtons]
 })
 export class TablePagePage implements OnInit {
-teams:string[] =  ["Brighton","Man City"];
-time:string =  "20:00";
-title:string = "Matches";
+title:string = "New's Page"
   constructor() { }
 
   ngOnInit() {
