@@ -14,4 +14,8 @@ export const routes: Routes = [
     path: 'table-page',
     loadComponent: () => import('./table-page/table-page.page').then( m => m.TablePagePage)
   },
+  {
+    path: 'player-nominies',
+    loadComponent: () => import('./player-nominies/player-nominies.page').then( m => m.PlayerNominiesPage)
+  },
 ];
