@@ -12,7 +12,8 @@ import { PlayersService } from '../players.service';
   styleUrls: ['./player-nominies.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,RouterLinkWithHref,IonButton,
-  IonMenu, IonMenuButton,IonButtons,IonCard,IonCardHeader,IonCardTitle,IonCardSubtitle]
+  IonMenu, IonMenuButton,IonButtons,IonCard,IonCardHeader,IonCardTitle,IonCardSubtitle],
+  providers: [PlayersService]
 })
 export class PlayerNominiesPage implements OnInit {
 players:any =[];
@@ -21,7 +22,7 @@ players:any =[];
   ngOnInit() {
     this.playerService.GetPlayerData().subscribe(
       (data)=>{
-        this.players = data.Search;
+        this.players = data.players;
       }
     );
   }
