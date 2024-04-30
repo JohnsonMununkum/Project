@@ -13,7 +13,5 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonMenu, IonMenuButton, Io
 export class HomePage {
   constructor() {}
 
-  showTable(){
-
-  }
+ 
 }

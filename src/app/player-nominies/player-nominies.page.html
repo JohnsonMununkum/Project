@@ -10,7 +10,7 @@
         <!-- lets user direct to the news page of the app-->
         <!-- fill = clear allows the buttons background to be clear-->
         <!-- color just sets the text color to dark-->
-      <ion-button [routerLink]="['/Home']" fill="clear" color="dark">Home Page</ion-button>
+      <ion-button [routerLink]="['/home']" fill="clear" color="dark">Home Page</ion-button>
       <br>
       <!-- allows next button to go on a sepearte line-->
       <ion-button [routerLink]="['/table-page']" fill="clear" color="dark">New's Page</ion-button>
@@ -33,16 +33,33 @@
 
 
     <!-- Ion-padding class gives padding between the content and the title-->
-    <!-- Not working -->
 
-    <ion-content class="ion-padding"> 
-      <ion-card *ngFor="let p of players">
-        <img src="{{p.image}}" height="400" width="400">
-        <ion-card-header>
+
+   <ion-content class="ion-padding">
+   <ion-card *ngFor="let p of players">
+      <img src="{{p.image}}" height="400" width="400">
+      <ion-card-header>
         <ion-card-subtitle>{{p.name}}</ion-card-subtitle>
         <ion-card-title>{{p.age}}</ion-card-title>
         </ion-card-header>
-        </ion-card>
-        </ion-content>
+        <ion-card-content>
+            Position: {{p.position}}
+            <br>
+            Club: {{p.club}}
+            <br>
+            Nationality: {{p.nationality}}
+            <br>
+            Goals: {{p.goals}}
+            <br>
+            Assists: {{p.assits}}
+            <br>
+            Games Played: {{p.games}}
+            <br>
+            Goal Contributions: {{p.gc}}
+            <br>
+        </ion-card-content>
+   </ion-card>
+    <ion-button [routerLink]="['/votes']">Click here to Vote</ion-button> 
+        </ion-content> 
 </div>
 

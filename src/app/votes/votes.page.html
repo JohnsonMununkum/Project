@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-title>Vote for POTY</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Vote for POTY</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="light">
+    <ion-list [inset]="true">
+      <ion-radio-group [(ngModel)]="userVote">
+      <ion-item>
+        <ion-Label  [routerLink]="['/palmer']">Cole Palmer</ion-Label>
+        <ion-radio value="Cole Palmer"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phil Foden</ion-label>
+        <ion-radio value="Phil Foden"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ollie Watkins</ion-label>
+        <ion-radio value="Ollie Watkins"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Erling Halland</ion-label>
+        <ion-radio value="Erling Halland"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Declan Rice</ion-label>
+        <ion-radio value="Declan Rice"></ion-radio>
+      </ion-item>
+    </ion-radio-group> 
+    </ion-list>
+   <!--<ion-button (click)="saveUserVote()">Save</ion-button> --> 
+  </ion-content>
+</ion-content>

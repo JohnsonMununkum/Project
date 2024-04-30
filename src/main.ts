@@ -7,6 +7,7 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { IonicStorageModule } from '@ionic/storage-angular';//after installing the storage and import it here 
 
 if (environment.production) {
   enableProdMode();
@@ -18,5 +19,6 @@ bootstrapApplication(AppComponent, {
     provideIonicAngular(),
     provideRouter(routes),
     importProvidersFrom(HttpClientModule),
+    importProvidersFrom(IonicStorageModule.forRoot())
   ],
 });

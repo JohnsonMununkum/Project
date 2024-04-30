@@ -18,4 +18,12 @@ export const routes: Routes = [
     path: 'player-nominies',
     loadComponent: () => import('./player-nominies/player-nominies.page').then( m => m.PlayerNominiesPage)
   },
+  {
+    path: 'votes',
+    loadComponent: () => import('./votes/votes.page').then( m => m.VotesPage)
+  },
+  {
+    path: 'palmer',
+    loadComponent: () => import('./palmer/palmer.page').then( m => m.PalmerPage)
+  },
 ];
