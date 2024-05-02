@@ -21,12 +21,18 @@ userVote: string= "";
   ngOnInit() {
   }
   
- /* async saveUserVote(){
-    await this.storage.set('vote', this.userVote)
-    .then(
-      ()->{
-        this.router.navigate(['/home'])
-      })
-      .catch();
-  }*/
+  async ionViewWillEnter(){
+    await this.storage.create();
+    this.userVote = await this.storage.get('vote');
+  }
+
+   async saveUserVote(){
+      await this.storage.set('vote', this.userVote)
+      .then(
+        ()=>{
+          this.router.navigate(['/player-nominies'])
+        })
+        .catch();
+  }
+
 }

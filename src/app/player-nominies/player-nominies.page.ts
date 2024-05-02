@@ -5,6 +5,8 @@ import { IonButton, IonButtons, IonCard, IonCardHeader, IonCardSubtitle, IonCard
 import { RouterLinkWithHref } from '@angular/router';
 //import in the player servie into here
 import { PlayersService } from '../players.service';
+import { Storage } from '@ionic/storage-angular';
+
 @Component({
   selector: 'app-player-nominies',
   templateUrl: './player-nominies.page.html',
@@ -17,7 +19,7 @@ import { PlayersService } from '../players.service';
 export class PlayerNominiesPage implements OnInit {
 players:any =[];
 userVote:string = "";
-  constructor(private playerService:PlayersService) { }
+  constructor(private playerService:PlayersService, private storage: Storage) { }
 
   ngOnInit() {
     this.playerService.GetPlayerData().subscribe(
@@ -27,8 +29,9 @@ userVote:string = "";
     );
   }
 
-  /*async ionWillEnter(){
-    await this.storage['create']();
-    this.userVote = await this.storage['get']('vote');
-  }*/
+  async ionViewWillEnter(){
+    await this.storage.create();
+    this.userVote = await this.storage.get('vote');
+  }
+
 }
