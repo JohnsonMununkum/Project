@@ -11,7 +11,7 @@ import { PlayersService } from '../players.service';
   styleUrls: ['./watkins.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonBackButton,IonButtons],//anything used in the html page buttons etc put here
-  providers:[PlayersService],
+  providers:[PlayersService],//to use the players api
 })
 export class WatkinsPage implements OnInit {
   players:any =[];

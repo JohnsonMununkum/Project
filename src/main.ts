@@ -8,11 +8,11 @@ import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage-angular';//after installing the storage and import it here 
-
+//imported the routes, ionic storage and the hhtpclientmodule
 if (environment.production) {
   enableProdMode();
 }
-
+//imported the routes, ionic storage and the hhtpclientmodule here also
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

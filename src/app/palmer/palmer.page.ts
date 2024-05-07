@@ -10,11 +10,12 @@ import { PlayersService } from '../players.service';
   templateUrl: './palmer.page.html',
   styleUrls: ['./palmer.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonButtons, IonBackButton],
-  providers: [PlayersService],
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonButtons, IonBackButton],//for the html buttons etc added
+  providers: [PlayersService],//to use the player api
 })
 export class PalmerPage implements OnInit {
   players:any =[];
+  //router there to navigate to a page
   constructor(private playerService:PlayersService) { }
    
   //to get the players api data

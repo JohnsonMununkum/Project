@@ -16,6 +16,8 @@ import { Router } from '@angular/router';//import router here
 })
 export class VotesPage implements OnInit {
 userVote: string= "";
+//put storage in parameters for the data storage
+//router there to navigate to a page
   constructor(private storage:Storage,private router: Router) { }
 
   ngOnInit() {

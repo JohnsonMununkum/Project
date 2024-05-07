@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons>
+      <!-- bak button -->
       <ion-back-button defaultHref="/"></ion-back-button>
       <ion-title>Vote for POTY</ion-title>
     </ion-buttons>
@@ -17,8 +18,10 @@
 
   <ion-content color="light">
     <ion-list [inset]="true">
+      <!-- ngmodel for the uservote -->
       <ion-radio-group [(ngModel)]="userVote">
       <ion-item>
+        <!-- when clicked goes to that page same w the rest-->
         <ion-Label  [routerLink]="['/palmer']">Cole Palmer</ion-Label>
         <ion-radio value="Cole Palmer"></ion-radio>
       </ion-item>
@@ -40,6 +43,7 @@
       </ion-item>
     </ion-radio-group> 
     </ion-list>
+    <!-- when clicked it saves the uservote-->
    <ion-button (click)="saveUserVote()">Save</ion-button>  
   </ion-content>
 </ion-content>

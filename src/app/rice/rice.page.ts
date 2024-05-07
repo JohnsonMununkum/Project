@@ -11,9 +11,10 @@ import { PlayersService } from '../players.service';
   styleUrls: ['./rice.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonBackButton,IonButtons],//anything used in the html page buttons etc put here
-  providers:[PlayersService],
+  providers:[PlayersService],//to use the player service
 })
 export class RicePage implements OnInit {
+  //playerservice in parameters for the player api
   players:any =[];
   constructor(private playerService:PlayersService) { }
     //playerservice is there to handle the player api data

@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons>
+      <!-- back button -->
       <ion-back-button defaultHref="/"></ion-back-button>
       <ion-title>Rice</ion-title>
     </ion-buttons>
@@ -14,6 +15,7 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- each number specifies different player data from 0 - 4-->
   <img src="{{players[4].image}}" width="500" height="500">
   <h1>{{players[4].name}}</h1>
   <h2>{{players[4].age}}</h2>

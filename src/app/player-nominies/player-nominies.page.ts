@@ -15,11 +15,13 @@ import { Storage } from '@ionic/storage-angular';
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,RouterLinkWithHref,IonButton,
   IonMenu, IonMenuButton,IonButtons,IonCard,IonCardHeader,IonCardTitle,IonCardSubtitle,IonCardContent],//anything used in the html page buttons etc put here
-  providers: [PlayersService],
+  providers: [PlayersService],//to use the player api
 })
 export class PlayerNominiesPage implements OnInit {
 players:any =[];
 userVote:string = "";
+//put storage in parameters for the data storage
+//router there to navigate to a page
   constructor(private playerService:PlayersService, private storage: Storage) { }//adding storage into the construcor for handling data storage
   //playerservice is there to handle the player api data
 

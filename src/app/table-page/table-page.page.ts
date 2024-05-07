@@ -12,6 +12,7 @@ import { RouterLinkWithHref } from '@angular/router';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, IonBackButton, IonMenu, IonMenuButton, RouterLinkWithHref,IonButtons]//anything used in the html page buttons etc put here
 })
 export class TablePagePage implements OnInit {
+  //for data bindng
 title:string = "New's Page"
   constructor() { }
 
