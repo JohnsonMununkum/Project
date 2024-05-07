@@ -35,3 +35,17 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+/* Set the background color of the header to the color picked*/
+ion-header {
+    --ion-background-color: blue;
+  }
+
+  /* Set the text color to dark */
+  /* Set the font weight to bold */
+  ion-title {
+    color: #000000; 
+    font-weight: bold; 
+  }
+
+  

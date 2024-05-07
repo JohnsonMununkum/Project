@@ -2,22 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonBackButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-//import in the player servie into here
+//importing the player service
 import { PlayersService } from '../players.service';
 
 @Component({
-  selector: 'app-palmer',
-  templateUrl: './palmer.page.html',
-  styleUrls: ['./palmer.page.scss'],
+  selector: 'app-watkins',
+  templateUrl: './watkins.page.html',
+  styleUrls: ['./watkins.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonButtons, IonBackButton],
-  providers: [PlayersService],
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonBackButton,IonButtons],//anything used in the html page buttons etc put here
+  providers:[PlayersService],
 })
-export class PalmerPage implements OnInit {
+export class WatkinsPage implements OnInit {
   players:any =[];
   constructor(private playerService:PlayersService) { }
-   
-  //to get the players api data
+//for the players api
   ngOnInit() {
     this.playerService.GetPlayerData().subscribe(
       (data)=>{

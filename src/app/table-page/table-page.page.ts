@@ -9,7 +9,7 @@ import { RouterLinkWithHref } from '@angular/router';
   templateUrl: './table-page.page.html',
   styleUrls: ['./table-page.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, IonBackButton, IonMenu, IonMenuButton, RouterLinkWithHref,IonButtons]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButton, IonBackButton, IonMenu, IonMenuButton, RouterLinkWithHref,IonButtons]//anything used in the html page buttons etc put here
 })
 export class TablePagePage implements OnInit {
 title:string = "New's Page"

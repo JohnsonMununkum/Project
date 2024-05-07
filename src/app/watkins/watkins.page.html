@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-title>Watkins</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Watkins</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <img src="{{players[2].image}}" width="500" height="500">
+  <h1>{{players[2].name}}</h1>
+  <h2>{{players[2].age}}</h2>
+  <p>Currently second in goals (16), tied for first in assists (10), 
+    and two clear of the pack in goal contributions (26), Watkins has been sensational for Villa.
+     The Villans have only lost once when he fails to score a goal. </p>
+</ion-content>

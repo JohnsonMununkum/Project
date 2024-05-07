@@ -26,4 +26,20 @@ export const routes: Routes = [
     path: 'palmer',
     loadComponent: () => import('./palmer/palmer.page').then( m => m.PalmerPage)
   },
+  {
+    path: 'foden',
+    loadComponent: () => import('./foden/foden.page').then( m => m.FodenPage)
+  },
+  {
+    path: 'watkins',
+    loadComponent: () => import('./watkins/watkins.page').then( m => m.WatkinsPage)
+  },
+  {
+    path: 'halland',
+    loadComponent: () => import('./halland/halland.page').then( m => m.HallandPage)
+  },
+  {
+    path: 'rice',
+    loadComponent: () => import('./rice/rice.page').then( m => m.RicePage)
+  },
 ];

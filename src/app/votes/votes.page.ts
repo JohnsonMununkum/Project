@@ -12,7 +12,7 @@ import { Router } from '@angular/router';//import router here
   styleUrls: ['./votes.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItem, IonLabel,RouterLinkWithHref,
-  IonButtons, IonBackButton, IonRadio, IonRadioGroup,IonButton]
+  IonButtons, IonBackButton, IonRadio, IonRadioGroup,IonButton]//anything used in the html page buttons etc put here
 })
 export class VotesPage implements OnInit {
 userVote: string= "";
@@ -21,11 +21,13 @@ userVote: string= "";
   ngOnInit() {
   }
   
+  //creates the data storage and then puts the uservote into it
   async ionViewWillEnter(){
     await this.storage.create();
     this.userVote = await this.storage.get('vote');
   }
 
+  //button for when user clicks it the uservote is saved
    async saveUserVote(){
       await this.storage.set('vote', this.userVote)
       .then(
